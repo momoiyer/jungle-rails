@@ -2,6 +2,13 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+
+    @order_product_details = []
+
+    @order.line_items.each do |line_item|
+      @order_product_details.push(Product.find line_item.product_id)
+    end
+    
   end
 
   def create
@@ -52,8 +59,9 @@ class OrdersController < ApplicationController
         total_price: product.price * quantity
       )
     end
-    order.save!
-    order
+    order.save!    
+    
+    order    
   end
 
 end
