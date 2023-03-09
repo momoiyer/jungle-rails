@@ -1,12 +1,8 @@
-<section class="admin-products-index">
+<section class="admin-dashboard-index">
 
   <header class="page-header">
     <h1>Admin &raquo; Dashboard</h1>
   </header>
-
-  <div class="products">
-  <%= link_to 'View All Products', [:admin, :products], class: 'btn btn-info' %>
-</div>
 
   <div class="row">
     <div class="col-sm-6">
@@ -14,7 +10,8 @@
         <div class="card-body with-background">        
           <i class="fa fa-tree fa-2x"></i>
           <h2 class="timer count-title count-number"><%= @products_count %> </h2>
-          <p class="count-text ">Total Products</p>                    
+          <p class="count-text ">Total Products</p>      
+           <%= link_to 'View All', [:admin, :products], class: 'btn btn-info' %>              
         </div>
       </div>
     </div>
@@ -24,6 +21,7 @@
         <i class="fa fa-list fa-2x"></i>
         <h2 class="timer count-title count-number"><%= @category_count %></h2>
         <p class="count-text ">Total Categories</p>
+         <%= link_to 'View All', [:admin, :categories], class: 'btn btn-info' %>
         <div></div>
         </div>
       </div>
