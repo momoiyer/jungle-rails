@@ -43,7 +43,30 @@
           <%# </ul>
         </li> %>
       </ul>
-      <ul class="navbar-nav">        
+      <ul class="navbar-nav">   
+             
+        <% if current_user %>
+        <li class="nav-item">  
+          <div class="nav-link ">
+            Signed in as <%= current_user.first_name %>     
+          </div>
+        </li>
+        <li class="nav-item">  
+          <%= link_to [:logout], class: "nav-link " do %> <%= fa_icon "sign-out" %>
+            Logout <% end %> 
+        <li>  
+        <% else %>
+        <li class="nav-item">  
+          <%= link_to [:login], class: "nav-link " do %> <%= fa_icon "sign-in" %>
+            Login <% end %> 
+        </li>
+        <li class="nav-item">  
+          <%= link_to [:signup], class: "nav-link " do %> <%= fa_icon "user-plus" %>
+              Register New User <% end %>
+              </li> 
+        <% end %>  
+    
+      
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle text-danger"
@@ -59,11 +82,7 @@
             <li><%= link_to 'Dashboard', [:admin, :root], class: "nav-link" %></li>
             <li><%= link_to 'Products', [:admin, :products], class: "nav-link" %></li>
           </ul>
-        </li>
-        <li class="nav-item end-0">
-          <%= link_to [:user, :index], class: "nav-link " do %> <%= fa_icon "user-plus" %>
-         Register New User <% end %>
-        </li>
+        </li>        
         <li class="nav-item end-0">
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
           My Cart (<%= cart.size %>) <% end %>

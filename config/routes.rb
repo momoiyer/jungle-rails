@@ -20,7 +20,16 @@ Rails.application.routes.draw do
   
   resources :about, only: [:index]
 
-  resources :user, only: [:index, :create] 
+  # resources :user, only: [:index, :create] 
+
+  
+  # these routes are for showing users a login form, logging them in, and logging them out.
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  get '/signup' => 'user#new'
+  post '/user' => 'user#create'
   # do
   #   post :create
   # end
