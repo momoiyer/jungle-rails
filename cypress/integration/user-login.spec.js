@@ -3,19 +3,12 @@ describe('User Login', () => {
     cy.visit('/');
   });
 
-  it("Clicking on product should go to product detail page", () => {
+  it("User can login successfully and are taken to the home page once they are signed in", () => {
     cy.get('.nav-link').contains("Login").click();
-    // User.create({
-    //   first_name: 'John',
-    //   last_name: 'Doe',
-    //   email: 'johndoe@mail.com',
-    //   password: 'password',
-    //   password_confirmation: 'password'
-    // });
-    // .should('contains.text', 'My Cart (0)');
-    // cy.get(".products article").first();
-    // cy.contains('Add').click({ force: true });
-    // cy.get('.end-0 > .nav-link').should('contains.text', 'My Cart (1)');;
+    cy.get('#email').clear().type("johndoe2@mail.com");
+    cy.get('#password').clear().type("password");
+    cy.contains("Submit").click();
+    cy.get('main:contains("Looking for a way to add some life to your home?")');
   });
 
 });
