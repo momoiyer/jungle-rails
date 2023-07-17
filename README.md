@@ -1,40 +1,3 @@
-# Jungle
-
-A mini e-commerce application built with Rails 6.1
-
-## Setup
-
-1. Run `bundle install` to install dependencies
-2. Create `config/database.yml` by copying `config/database.example.yml`
-3. Create `config/secrets.yml` by copying `config/secrets.example.yml`
-4. Run `bin/rails db:reset` to create, load and seed db
-5. Create .env file based on .env.example
-6. Sign up for a Stripe account
-7. Put Stripe (test) keys into appropriate .env vars
-8. Run `bin/rails s -b 0.0.0.0` to start the server
-
-## Database
-
-If Rails is complaining about authentication to the database, uncomment the user and password fields from `config/database.yml` in the development and test sections, and replace if necessary the user and password `development` to an existing database user.
-
-## Stripe Testing
-
-Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
-
-More information in their docs: <https://stripe.com/docs/testing#cards>
-
-## Dependencies
-
-- Rails 6.1 [Rails Guide](http://guides.rubyonrails.org/v6.1/)
-- Bootstrap 5
-- PostgreSQL 9.x
-- Stripe
-
-## Testing
-
-- RSpec
-- Cypress
-
 
 # 
 # PROJECT TITLE - Jungle
@@ -47,16 +10,16 @@ An ecommerce web app to buy plants by category, and user can check out using Str
 
 ## Languages, Frameworks & Database ##
 
-![Ruby On Rails](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Rails 6.1](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Bootstrap 5](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ## API ##
-![Stripe](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Stripe](https://img.shields.io/badge/stripe-white.svg?style=for-the-badge&logo=stripe&logoColor=#6772e5)
 
 ## Testing ##
-![Rspec](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Cypress](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Rspec](https://img.shields.io/badge/-rspec-lightblue?style=for-the-badge&logo=ruby&logoColor=red)
+![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
 
 ## Others
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
@@ -108,3 +71,24 @@ An ecommerce web app to buy plants by category, and user can check out using Str
 ![Admin Product](doc/adminAddProdcut.jpg)
 ![Admin Product](doc/adminAddNewProduct.jpg)
 
+
+## Project Setup
+
+1. Run `bundle install` to install dependencies
+2. Create `config/database.yml` by copying `config/database.example.yml`
+3. Create `config/secrets.yml` by copying `config/secrets.example.yml`
+4. Run `bin/rails db:reset` to create, load and seed db
+5. Create .env file based on .env.example
+6. Sign up for a Stripe account
+7. Put Stripe (test) keys into appropriate .env vars
+8. Run `bin/rails s -b 0.0.0.0` to start the server
+
+## Database Setup
+
+If Rails is complaining about authentication to the database, uncomment the user and password fields from `config/database.yml` in the development and test sections, and replace if necessary the user and password `development` to an existing database user.
+
+## Stripe Testing
+
+Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+
+More information in their docs: <https://stripe.com/docs/testing#cards>
